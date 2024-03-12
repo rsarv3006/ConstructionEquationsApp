@@ -1,0 +1,16 @@
+[ConstructionEquationsApp] Compiling LaunchScreen.storyboard
+[ConstructionEquationsApp] Processing ConstructionEquationsApp-Info.plist
+[!]  --- xcodebuild: Using the first of multiple matching destinations:
+{ platform:iOS Simulator, id:19092651-E761-42EF-AF4C-F1F4888966A8, OS:17.2, name:iPhone 15 }
+{ platform:iOS Simulator, id:19092651-E761-42EF-AF4C-F1F4888966A8, OS:17.2, name:iPhone 15 }
+[ConstructionEquationsApp] Compiling GeneratedAssetSymbols.swift
+[ConstructionEquationsApp] Compiling HomeScreen.swift
+Signing ConstructionEquationsApp.app (in target 'ConstructionEquationsApp' from project 'ConstructionEquationsApp')
+Build Succeeded
+
+-----------------------------
+-- xcodebuild.nvim summary --
+-----------------------------
+
+  ✔ Build Succeeded
+
