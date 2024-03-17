@@ -12,8 +12,8 @@
 	"argv": [
 		"/opt/homebrew/bin/xcode-build-server"
 	],
-	"workspace": "/Users/rjs/dev/ConstructionEquationsApp/ConstructionEquationsApp.xcworkspace",
-	"build_root": "/Users/rjs/Library/Developer/Xcode/DerivedData/ConstructionEquationsApp-bjjlbgukpilvdqdupxvhhrkzjpiy",
-	"scheme": "ConstructionEquationsApp",
+	"workspace": "/Users/rjs/dev/ConstructionEquations/ConstructionEquations.xcodeproj/project.xcworkspace",
+	"build_root": "/Users/rjs/Library/Developer/Xcode/DerivedData/ConstructionEquations-cfnfdkwxllntulfxeypedrhgojnb",
+	"scheme": "ConstructionEquations",
 	"kind": "xcode"
 }

@@ -1,11 +1,15 @@
-[ConstructionEquationsApp] Compiling LaunchScreen.storyboard
-[ConstructionEquationsApp] Processing ConstructionEquationsApp-Info.plist
+Resolving Package Graph
+Resolved source packages
+SVGView - https://github.com/exyte/SVGView @ 1.0.6
+MathJaxSwift - https://github.com/colinc86/MathJaxSwift @ 3.4.0
+HTMLEntities - https://github.com/Kitura/swift-html-entities @ 4.0.1
 [!]  --- xcodebuild: Using the first of multiple matching destinations:
 { platform:iOS Simulator, id:19092651-E761-42EF-AF4C-F1F4888966A8, OS:17.2, name:iPhone 15 }
 { platform:iOS Simulator, id:19092651-E761-42EF-AF4C-F1F4888966A8, OS:17.2, name:iPhone 15 }
-[ConstructionEquationsApp] Compiling GeneratedAssetSymbols.swift
-[ConstructionEquationsApp] Compiling HomeScreen.swift
-Signing ConstructionEquationsApp.app (in target 'ConstructionEquationsApp' from project 'ConstructionEquationsApp')
+[ConstructionEquations] Linking ConstructionEquations
+[ConstructionEquations] Linking ConstructionEquations
+[ConstructionEquations] Generating ConstructionEquations.app.dSYM
+Signing ConstructionEquations.app (in target 'ConstructionEquations' from project 'ConstructionEquations')
 Build Succeeded
 
 -----------------------------
