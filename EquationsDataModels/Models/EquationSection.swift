@@ -2,5 +2,5 @@ import Foundation
 
 public struct EquationSection {
     let title: String
-    let equations: [ConstructionEquation]
+    let equations: [Equation]
 }

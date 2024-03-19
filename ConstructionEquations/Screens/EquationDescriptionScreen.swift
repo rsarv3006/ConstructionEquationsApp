@@ -9,7 +9,7 @@ import LaTeXSwiftUI
 import SwiftUI
 
 struct EquationDescriptionScreen: View {
-    var equation: ConstructionEquation
+    var equation: Equation
 
     var body: some View {
         ScrollView {
@@ -23,8 +23,4 @@ struct EquationDescriptionScreen: View {
                 .padding()
         }
     }
-}
-
-#Preview {
-    EquationDescriptionScreen(equation: equations.first!.equations.first!)
 }

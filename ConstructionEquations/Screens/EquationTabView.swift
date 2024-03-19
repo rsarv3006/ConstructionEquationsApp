@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EquationTabView: View {
     @State private var selectedTab = "One"
-    var equation: ConstructionEquation
+    var equation: Equation
 
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -26,8 +26,4 @@ struct EquationTabView: View {
                 .tag("Two")
         }
     }
-}
-
-#Preview {
-    EquationTabView(equation: equations.first!.equations.first!)
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-public struct ConstructionEquation {
+public struct Equation {
     let id: EquationIds
     let title: String
     let description: String

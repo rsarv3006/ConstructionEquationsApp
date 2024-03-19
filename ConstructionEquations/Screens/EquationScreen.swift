@@ -9,11 +9,11 @@ let decimalFormatter: NumberFormatter = {
 }()
 
 struct EquationScreen: View {
-    var equation: ConstructionEquation
+    var equation: Equation
 
     @State private var values: [Double] = []
 
-    init(equation: ConstructionEquation) {
+    init(equation: Equation) {
         self.equation = equation
         _values = State(initialValue: Array(repeating: 0, count: equation.fieldLabels.count))
     }
