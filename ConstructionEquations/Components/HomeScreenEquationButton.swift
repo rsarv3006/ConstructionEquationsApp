@@ -14,10 +14,10 @@ struct HomeScreenEquationButton: View {
     @Binding var selectedEquation: Equation?
     @State var shouldShowLockedFunctionModal = false
     
-    
     private var isDisabled: Bool {
         return !storekitStore.hasPurchasedUnlockAdvancedEquations && equation.filters.contains(.advancedFunctions)
     }
+    
     var body: some View {
         Button(action: {
             if !isDisabled {
@@ -30,8 +30,7 @@ struct HomeScreenEquationButton: View {
                 LaTeX(equation.title)
                 Spacer()
             }
-            .foregroundColor(isDisabled ? .gray : .accentColor)
-            .modifier(RoundedBorderView())
+            .modifier(CustomizableRoundedBorderView(isDisabled: isDisabled))
             .frame(height: 60)
         }
         .padding(.horizontal)
