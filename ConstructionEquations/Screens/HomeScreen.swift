@@ -8,34 +8,53 @@ struct HomeScreen: View {
     
     var body: some View {
         if !isLoadingStorekit {
-            ScrollView {
-                Text("Construction Equations")
-                    .font(.title)
-                    .foregroundStyle(.accent)
-                    .padding()
-                ForEach(equations, id: \.title) { section in
-                    Section(header:
-                                HStack {
-                        Text(section.title)
-                            .font(.title2)
-                            .foregroundStyle(Color.accentColor)
-                            .padding(.horizontal)
+            VStack {
+                ZStack {
+                    HStack {
                         Spacer()
-                    }) {
-                        ForEach(section.equations, id: \.id) { equation in
-                            HomeScreenEquationButton(equation: equation, selectedEquation: $selectedEquation)
+                        
+                        NavigationLink(destination: SettingsScreen()) {
+                            Image(systemName: "gear.circle")
+                                .font(.title2)
+                                .foregroundStyle(.accent)
                         }
-                        .padding(.bottom)
+                        .padding([.trailing])
+                    }
+                    
+                    Text("Construction Equations")
+                        .font(.title2)
+                        .foregroundStyle(.accent)
+                }
+                
+                Rectangle()
+                    .fill(.accent)
+                    .frame(height: 1)
+                
+                ScrollView {
+                    ForEach(equations, id: \.title) { section in
+                        Section(header:
+                                    HStack {
+                            Text(section.title)
+                                .font(.title3)
+                                .foregroundStyle(Color.accentColor)
+                                .padding(.horizontal)
+                            Spacer()
+                        }) {
+                            ForEach(section.equations, id: \.id) { equation in
+                                HomeScreenEquationButton(equation: equation, selectedEquation: $selectedEquation)
+                            }
+                            .padding(.bottom)
+                        }
                     }
                 }
+                .navigationDestination(isPresented: Binding<Bool>(
+                    get: { selectedEquation != nil },
+                    set: { _ in selectedEquation = nil }
+                )) {
+                    if let equation = selectedEquation {
+                        EquationTabView(equation: equation)
+                    }
             }
-            .navigationDestination(isPresented: Binding<Bool>(
-                get: { selectedEquation != nil },
-                set: { _ in selectedEquation = nil }
-            )) {
-                if let equation = selectedEquation {
-                    EquationTabView(equation: equation)
-                }
             }
         } else {
             ProgressView()
@@ -47,4 +66,10 @@ struct HomeScreen: View {
                 }
         }
     }
+}
+
+
+#Preview {
+    HomeScreen()
+        .environmentObject(StorekitStore())
 }
