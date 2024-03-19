@@ -16,7 +16,21 @@ struct SettingsScreen: View {
                 SettingsInAppPurchases(product: product)
                     .padding(.top)
             }
+            
+            VStack {}
+                .padding(.vertical)
+            
+            Text("[Contact Support](https://rjsappdev.wixsite.com/construction/general-5)")
+                .modifier(RoundedBorderView())
+            
+            Text("[Privacy Policy](https://rjsappdev.wixsite.com/construction/privacy-policy)")
+                .modifier(RoundedBorderView())
+            
+            Text("[EULA](https://rjsappdev.wixsite.com/construction/eula)")
+                .modifier(RoundedBorderView())
         }
+        .padding(.horizontal)
+        .frame(maxWidth: 400)
         .navigationTitle("Settings")
     }
 }

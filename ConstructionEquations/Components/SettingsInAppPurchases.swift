@@ -24,6 +24,7 @@ struct SettingsInAppPurchases: View {
     
     var body: some View {
         VStack {
+            if !store.hasPurchasedUnlockAdvancedEquations {
                 Button {
                     Task {
                         isLoading = true
@@ -39,15 +40,16 @@ struct SettingsInAppPurchases: View {
                             .progressViewStyle(CircularProgressViewStyle())
                     }
                 }
-                .buttonStyle(.bordered)
+                .modifier(RoundedBorderView())
                 .disabled(isLoading)
+            }
             
             Button("Restore Purchases", action: {
                 Task {
                     try? await AppStore.sync()
                 }
             })
-            .buttonStyle(.bordered)
+            .modifier(RoundedBorderView())
         }
         .alert(isPresented: $isShowingError, content: {
             Alert(title: Text(errorTitle), message: nil, dismissButton: .default(Text("Okay")))

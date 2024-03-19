@@ -31,16 +31,9 @@ struct HomeScreenEquationButton: View {
                 Spacer()
             }
             .foregroundColor(isDisabled ? .gray : .accentColor)
-            .padding([.horizontal, .vertical], 8)
-            .frame(maxWidth: .infinity)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(isDisabled ? Color.gray : Color.accentColor, lineWidth: 1)
-            )
-            .cornerRadius(10)
+            .modifier(RoundedBorderView())
             .frame(height: 60)
         }
-        .buttonStyle(PlainButtonStyle())
         .padding(.horizontal)
         .sheet(isPresented: $shouldShowLockedFunctionModal, content: {
             VStack {
@@ -55,7 +48,7 @@ struct HomeScreenEquationButton: View {
                 }
                 .padding()
                 
-                Text("This equation is part of the Advanced Equations Pack. Please visit the Settings Screen to unlock Advanced Functions.")
+                Text("This equation is part of the Advanced Equations Pack. Please visit Settings to unlock Advanced Functions.")
                     .foregroundStyle(.accent)
                 
                 Spacer()
