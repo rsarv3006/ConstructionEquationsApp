@@ -1,10 +1,3 @@
-//
-//  StoreKit.swift
-//  ConstructionEquations
-//
-//  Created by Robert J. Sarvis Jr on 3/17/24.
-//
-
 import Foundation
 import StoreKit
 
